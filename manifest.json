@@ -1,10 +1,20 @@
 {
-    "name": "Nang Ad Blocker", 
+    "name": "Block Ads", 
     "description": "Adblocker that doesn't get detected",
-    "manifest_version": 2,
     "version": "1.11", 
-    "background": {
-        "scripts": ["blockedsites_v2.js", "nangadblock.js"]
+    "content_scripts":[{
+        "js": ["script.js"],
+        "run_at": "document_idle",
+        "matches": ["<all_urls>"]
+    }],
+    "icons":{
+        "16": "images/icon16x16.png",
+        "48": "images/icon48x48.png"
     },
-    "permissions": ["webRequest", "webRequestBlocking", "http://*/", "https://*/"]
+    "permissions": ["tabs","activeTab","webRequest", "webRequestBlocking", "http://*/", "https://*/"],
+    "background": {
+        "scripts": ["blockedsites_v2.js", "adblock.js"]
+    },
+    "manifest_version": 2
+    
 }
