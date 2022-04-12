@@ -6,3 +6,4 @@ chrome.webRequest.onBeforeRequest.addListener(
     {urls: blocked_sites_v2},
     ["blocking"]
 )
+//Qua commit nhé mọi người ahii đồ ngốc

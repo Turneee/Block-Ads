@@ -1,3 +1,4 @@
+
 file_in = open("domainsblockraw.txt", "r")
 file_out = open("blockedsites.js", "w")
 
